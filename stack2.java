@@ -43,6 +43,7 @@ public class stack2 {
             else
             {
                 System.out.println("Deleted element is -:"+stack[top]);
+                stack[top]=0;
                 top--;
             }
         }
@@ -66,7 +67,9 @@ public class stack2 {
             }
             else
             {
+                
                 System.out.println("Stack elements are");
+                
                 for(int i=top;i>=0;i--)
                 {
                     System.out.println(stack[i]);
