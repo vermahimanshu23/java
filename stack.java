@@ -1,23 +1,8 @@
-import java.util.Scanner;
-import java.util.Stack;
-public class stack 
-{  int size=10;
-    int [] stack=new int[size];
+class stack{
+    int stack[]=new int[5];
     int top=-1;
-    
-    Scanner scan=new Scanner(System.in);
-   
-    while(true)
-    {
-        System.out.println("Enter your choice");
-        System.out.println("1.Push");
-        System.out.println("2.Pop");
-        System.out.println("3.Display");
-        System.out.println("4.Exit");
-        System.out.println("Enter your choice");
-         int ch=scan.nextInt();
-       
-    if (ch==1)
+    int size=5;
+    void push(int ele)
     {
         if(top==size-1)
         {
@@ -25,14 +10,11 @@ public class stack
         }
         else
         {
-            System.out.println("Enter the element to be inserted");
-            int ele=scan.nextInt();
             top++;
             stack[top]=ele;
         }
     }
-}
-    else if(ch==2)
+    void pop()
     {
         if(top==-1)
         {
@@ -40,11 +22,22 @@ public class stack
         }
         else
         {
-            System.out.println("Deleted element is"+stack[top]);
+            System.out.println("Deleted element is -:"+stack[top]);
             top--;
         }
     }
-    else if(ch==3)
+    void peek()
+    {
+        if(top==-1)
+        {
+            System.out.println("Stack is empty");
+        }
+        else
+        {
+            System.out.println("Peek element is -:"+stack[top]);
+        }
+    }
+    void display()
     {
         if(top==-1)
         {
@@ -59,19 +52,17 @@ public class stack
             }
         }
     }
-    else if(ch==4)
+    public static void main(String args[])
     {
-        System.exit(0);
+        stack s=new stack();
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        s.push(40);
+        s.push(50);
+        s.display();
+        s.pop();
+        s.display();
+        s.peek();
     }
-    else
-    {
-        System.out.println("Invalid choice");
-    }
-   
 }
-
-}
-
-
-    
-
