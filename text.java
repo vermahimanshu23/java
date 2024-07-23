@@ -1,26 +1,25 @@
 public class text {
     public static void main(String[] args) {
-        String str="hello world";
-        int size=15;
-        
-        int stack[]=new int[size];
-        int i;
-        for(i=0;i<str.length();i++)
-        {
 
-            if(str.charAt(i)=='l')
-            {
-        
-             stack[i]=str.charAt(i);
-             
+        String str = "nitin";
+        int n = str.length();
+        int count = 0;
+        for (int i = 0; i < n/2; i++) {
+
+            if (str.charAt(i) != str.charAt(n - i - 1)) {
+                count++;
+                
             }
-           
+         }
+          if(count==0){ 
+              System.out.println("String is palindrome");
+          }
+          else{
+              System.out.println("String is not palindrome");
+          }
+
         }
-        for(i=str.length();i>0;i--){
-            System.out.print((char)stack[i-1]);
-        }
-        
 
     }
-    
-}
+
+
