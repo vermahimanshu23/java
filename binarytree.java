@@ -33,5 +33,13 @@ public static void main(String[] args) {
         
         System.out.println(TreeNode.sumOfNodes(root));
 }
+public void insert(int i) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'insert'");
+}
+public boolean search(int valueToSearch) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'search'");
+}
     
 }
